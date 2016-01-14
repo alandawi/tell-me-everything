@@ -58,6 +58,40 @@ var tme = {
 
 	} )(),
 
+	os: ( function () {
+
+		var ua = navigator.userAgent;
+
+		if ( /Android/i.test( ua ) ) {
+
+			return 'Android';
+
+		} else if ( /CrOS/i.test( ua ) ) {
+
+			return 'Chrome OS';
+
+		} else if ( /iP[ao]d|iPhone/i.test( ua ) ) {
+
+			return 'iOS';
+
+		} else if ( /Linux/i.test( ua ) ) {
+
+			return 'Linux';
+
+		} else if ( /Mac OS/i.test( ua ) ) {
+
+			return 'Mac OS';
+
+		} else if ( /windows/i.test( ua ) ) {
+
+			return 'Windows';
+
+		}
+
+		return false;
+
+	} )(),
+
 	support: {
 
 		canvas: !! window.CanvasRenderingContext2D,
