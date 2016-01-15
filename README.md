@@ -1,4 +1,4 @@
-# Tell me Everything
+# Tell Me Everything
 
 tme.js is a very small library to detect user agents (browsers) and other extras utilities (canvas, localStorage and more)
 
@@ -8,7 +8,7 @@ tme.js is a very small library to detect user agents (browsers) and other extras
 
 ### Installation
 
-Really?...
+In a browser:
 
 ```sh
 <script src="tme.min.js"></script>

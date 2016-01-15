@@ -1,5 +1,25 @@
 var tme = {
 
+	language: ( function () {
+		return navigator.language;
+	} )(),
+
+	product: ( function () {
+		return navigator.product;
+	} )(),
+
+	platform: ( function () {
+		return navigator.platform;
+	} )(),
+
+	cookie: ( function () {
+		return navigator.cookieEnabled;
+	} )(),
+
+	online: ( function () {
+		return navigator.onLine;
+	} )(),
+
 	browser: ( function () {
 
 		var ua = navigator.userAgent;
@@ -110,6 +130,15 @@ var tme = {
 
 		} )(),
 
+		javaEnabled: ( function () {
+			var test = navigator.javaEnabled();
+				return test;
+		} )(),
+
+		svg: ( function () { try { return !! document.createElementNS && !! document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect; } catch( e ) { return false; } } )(),
+
+		webgl: ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
+
 		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob,
 
 		fileSystem: !! window.requestFileSystem || !! window.webkitRequestFileSystem,
@@ -131,6 +160,8 @@ var tme = {
 			}
 
 		} )(),
+
+		worker: !! window.Worker
 
 	}
 
